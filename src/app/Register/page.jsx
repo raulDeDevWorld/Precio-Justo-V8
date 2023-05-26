@@ -39,7 +39,7 @@ function Home() {
 
     useEffect(() => {
         if (userDB) router.replace('/Cliente')
-      }, [userDB]);
+      }, []);
 
 
     return (
