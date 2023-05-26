@@ -16,7 +16,7 @@ export default function Home() {
   const { user, setUserProfile, setUserSuccess, success, setUserData, postsIMG, setUserPostsIMG } = useUser()
   const router = useRouter()
 
-
+            
   const signUpHandler = (e) => {
     e.preventDefault()
     let email = e.target[0].value

@@ -40,7 +40,7 @@ const readUserData = async (rute, uuid, userDB, setUserData) => {
     .from(rute)
     .select()
     .eq('uuid', uuid)
-    setUserData({...userDB, [rute]: result.data[0]})
+    setUserData({...userDB, [rute]: result.data[0]})  
 }
 
 
