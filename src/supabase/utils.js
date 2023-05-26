@@ -35,6 +35,15 @@ const writeUserData = async (rute, object) => {
 
     console.log(result)
 }
+const readUserData = async (rute, uuid, userDB, setUserData) => {
+    const result = await supabase
+    .from(rute)
+    .select()
+    .eq('uuid', uuid)
+    setUserData({...userDB, [rute]: result.data})
+}
 
-export { onAuth, signUpWithEmailAndPassword, signInWithEmailAndPassword, signOut, writeUserData}
+
+
+export { onAuth, signUpWithEmailAndPassword, signInWithEmailAndPassword, signOut, writeUserData, readUserData}
 
